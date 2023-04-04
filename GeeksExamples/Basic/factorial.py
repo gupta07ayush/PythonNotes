@@ -8,10 +8,9 @@ def fact(n):
 print(fact(5))
 
 #while loop
-
 def fact2(n):
     if n<0:
-        return 0 
+        return 0
     elif n==0 or n==1:
         return 1
     else:
@@ -28,10 +27,6 @@ print(fact(5))
 def fact3(n):
     fact = 1
     for i in range(2, n+1):
-        fact = fact * i 
+        fact = fact * i
     return fact
 print(fact(5))
-
-
-
-        
