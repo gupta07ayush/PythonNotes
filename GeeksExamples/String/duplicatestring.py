@@ -1,7 +1,7 @@
 str1 = "geeksforgeeks"
 
-new = ""
 def rem_dup(str):
+    new = ""
     for i in str:
         if i not in new:
             new += i
