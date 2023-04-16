@@ -6,4 +6,4 @@ go to the folder where the .py file exists
 
 pyinstaller main.py --onefile -w
 
-Now open the folder- go to dist folder- open main.py
+Now open the folder- go to dist folder- open main.exe
