@@ -1,4 +1,4 @@
-There are 3 main types of I/O. 
-text I/O or String object
-binary I/O
-raw I/O 
+1. There are 3 main types of I/O. 
+2. text I/O or String object
+3. binary I/O
+4. raw I/O 
