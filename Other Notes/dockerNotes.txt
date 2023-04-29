@@ -1,0 +1,142 @@
+// check the version
+docker -v
+
+// pull image
+docker pull <imagename>
+
+//to show all images
+docker images
+
+//to pull a specific version of image
+docker pull python:18
+
+//search a specific docker image
+docker search MySQL
+docker search python
+
+
+# When you run any image, it converts into a container
+
+// how to run a image
+docker run python
+docker run <image ID>
+
+// show all docker container
+docker ps
+
+// show all docker container created
+docker ps -a
+
+
+# There are multiple flags with docker run
+// to name your container
+docker run --name myfirstpythoncontainer python
+
+// to run a container in detached mode
+docker run -d python
+# -d run the container in background(detached mode) 
+
+
+# when we run a command to run a image which makes a container, container stops after one second
+// to run a container in interactive mode
+docker run --name mypythoncontainer1 -it -d python
+
+// run a container directly in interactive mode without detached mode
+docker run --run mypython -it python
+
+// to run a container in enviornment variable mode
+docker run --name <nameyourcontainer> -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+docker run --name mydb -e MYSQL_ROOT_PASSWORD=root -d mysql
+
+# how to go inside our container
+// use execute command with container id and the command which you want to run inside that container. ID and command you can copy from docker ps
+docker exec -it <containerID> <command>
+docker exec -it 8d52fc1df13d python3
+docker exec -t myDB bash
+
+# Now you are inside your mypythoncontainer1 container and now you can run all python commands here like print...
+
+// To know all the information about your container
+docker inspect <containerID>   # i think we can give name instead of ID here
+docker inspect 8d52fc1df13d
+
+Example:
+docker pull nginx
+docker run --name myserver -d	 -p 8080:80 nginx    # -p for port
+now to go browse and search localhost:8080
+
+ 
+// How to stop a container
+docker stop <containerID/name>
+docker stop mypythodcontainer1
+docker stop myserver
+
+# Now you can see no container is running currently by command docker ps
+But you can see all container status which you ran by command docker ps -a
+
+// how to remove container details from docker ps -a 
+docker rm <containerID>
+docker rm cecff34d67a5
+docker rm myserver
+docker rm mypythoncontainer
+
+// remove multiple container status 
+docker rm 57bc1f1bcc11 ea6af18b1b33 a21fa37bb5e4 myserver mypythoncontainer1
+
+// how to remove images
+docker rmi <imagename>
+docker rmi hello-world
+
+
+// how to restart the container which is already running
+docker restart <containerID/name>
+docker restart mypython
+# we can start a stopped container also by using this command
+
+
+# We can pull docker images from docker hub website
+# We can also push our images to docker hub
+
+// login to docker hub after which you can push your made image to hub directly
+docker login
+
+// to logout from docker hub
+docker logout
+
+// to push your image
+docker push
+
+// create and save the image of edited container in the local system
+docker commit
+
+//to check logs
+docker logs <containerID/name>
+
+// copy docker image files from local system
+docker copy
+
+//  creates a volume so that the docker container use it to store the data
+docker volume
+
+
+
+#### HOW TO CREATE OWN DOCKER IMAGE ####
+# To create a docker image, first we have to make a docker file
+# to make a docker file we must create a project folder
+# projectfolder>Dockerfile 
+# Dockerfile has no extention
+# D is capital in Dockerfile
+
+// what to write inside Dockerfile
+//parent image base image
+FROM ubuntu
+
+//which command you want to run when image will build
+RUN apt update
+CMD ["echo", "this is my first ubuntu image"]
+
+// to build a image open terminal and run these command
+docker build -t myubuntuimage .   # t for tag and . is path it means current folder
+
+
+
