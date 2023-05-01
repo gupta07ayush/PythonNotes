@@ -1,4 +1,11 @@
 This is a sample file.
 It has 91 characters and 25 words.
 The file has 4 lines.
-Number of spaces in the file is 21.
+Number of spaces in the file is 21.1. There are 3 main types of I/O. 
+2. text I/O or String object
+3. binary I/O
+4. raw I/O 
+1. There are 3 main types of I/O. 
+2. text I/O or String object
+3. binary I/O
+4. raw I/O 

@@ -1,2 +1,12 @@
-There are many Methods of TextIOWrappter class.
-Ayush Gupta
+coin:H
+coin:T
+coin:H
+coin:T
+coin:H
+coin:T
+coin:H
+coin:T
+coin:H
+coin:T
+coin:H
+coin:T 
