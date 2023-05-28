@@ -13,9 +13,12 @@ def test_logout():
     print("Log out from the application")
 
 
-# Note 1: This will run only first function of the this file.
+# Note 1: This will run only first function of the this file. k=string
 # pytest test_second.py -k login
 
 
 # Note 2: v=verbose -It will show you some more details
 # pytest -rA -v
+
+# Note 3 : for help
+# pytest -h or pytest --help
