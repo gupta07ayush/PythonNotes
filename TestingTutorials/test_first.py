@@ -29,3 +29,11 @@ def test_3():
 
     assert name in title
 # this test will pass
+
+
+def test_4():
+    name = 'Jenkins'
+    title = 'jenkins is a CI server.'
+
+    # this additional parameter will print if the test fails.
+    assert name in title, "Title does not match"
