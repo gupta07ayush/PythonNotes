@@ -37,3 +37,9 @@ def test_4():
 
     # this additional parameter will print if the test fails.
     assert name in title, "Title does not match"
+
+# Note1: when you write command pytest on the terminal, It only gives
+    # the information about failed test.
+# Note2: pytest -rA
+    # it will gives you summery of passed test also.
+    # here A=All
