@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="9" time="0.273" timestamp="2023-05-28T21:41:46.931507" hostname="AyushPC"><testcase classname="test_first" name="test_1" time="0.004"><failure message="assert 10 == 20">def test_1():
+        x = 10
+        y = 20
+    
+&gt;       assert x == y
+E       assert 10 == 20
+
+test_first.py:9: AssertionError</failure></testcase><testcase classname="test_first" name="test_2" time="0.002" /><testcase classname="test_first" name="test_3" time="0.002" /><testcase classname="test_first" name="test_4" time="0.002"><failure message="AssertionError: Title does not match&#10;assert 'Jenkins' in 'jenkins is a CI server.'">def test_4():
+        name = 'Jenkins'
+        title = 'jenkins is a CI server.'
+    
+        # this additional parameter will print if the test fails.
+&gt;       assert name in title, "Title does not match"
+E       AssertionError: Title does not match
+E       assert 'Jenkins' in 'jenkins is a CI server.'
+
+test_first.py:39: AssertionError</failure></testcase><testcase classname="test_four" name="test_responsecode200" time="0.004" /><testcase classname="test_four" name="test_responsecode400" time="0.005" /><testcase classname="test_second" name="test_login" time="0.004" /><testcase classname="test_second" name="test_checkout" time="0.005" /><testcase classname="test_second" name="test_logout" time="0.001" /></testsuite></testsuites>
