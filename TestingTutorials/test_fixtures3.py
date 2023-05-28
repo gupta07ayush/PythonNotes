@@ -37,3 +37,8 @@ def test_3(setup):
 
 # note: If you don't see the close the browser line which is after yield in the test results. use -s flag
 # pytest .\test_fixtures2.py -s
+
+
+# pip install pytest-xdist
+# speedup tests by sending tests to multiple CPU
+# pytest -n NoOfCPU
