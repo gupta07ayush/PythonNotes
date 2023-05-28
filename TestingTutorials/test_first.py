@@ -21,3 +21,11 @@ def test_2():
 # this test will pass because 5=5
 # fail = F
 # pass = . (green dot)
+
+
+def test_3():
+    name = "Ayush"
+    title = "Ayush is a software engineer."
+
+    assert name in title
+# this test will pass
