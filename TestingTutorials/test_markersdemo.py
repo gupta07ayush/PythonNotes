@@ -16,9 +16,12 @@ def test_addProducts():
 def test_logout():
     print("Logout done")
 
+# Note:
  # To run the marker
  # pytest test_markersdemo.py -m markername
 
+# we can use and or not condition with markers
+# pytest test_markersdemo.py -m "smoke or regression"
 
 # Built-in markers
 # By using pytest.mark helper you can easily set metadata on your test functions.
