@@ -7,7 +7,7 @@ def test_login():
     print("Login done")
 
 
-@pytest.mark.skipif(sys.version_info < (3, 12), reason="Python version not supported")
+@pytest.mark.skipif(sys.version_info < (3, 12), reason="Skipped bcz Python version not supported")
 def test_addProducts():
     print("added products")
 
@@ -16,3 +16,8 @@ def test_addProducts():
 def test_logout():
     assert True
     print("Logout done")
+
+
+def test_closeApplication():
+    assert True
+    print("Close the application")
